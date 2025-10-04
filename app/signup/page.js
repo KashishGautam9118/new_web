@@ -1,24 +1,23 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Head from 'next/head';
+import Link from 'next/link';
+
+export const metadata = {
+  title: "Signup Page",
+};
 
 export default function Signup() {
   return (
-    <>
-      <Head>
-        <title>Signup Page</title>
-      </Head>
-
-      <div
-        className="min-vh-100 d-flex align-items-center justify-content-end"
-        style={{
-          backgroundImage: "url('four.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          paddingRight: '5%',
-          paddingLeft: '38%',
-        }}
-      >
+    <div
+      className="min-vh-100 d-flex align-items-center justify-content-end"
+      style={{
+        backgroundImage: "url('/four.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        paddingRight: '5%',
+        paddingLeft: '38%',
+      }}
+    >
         <div className="container">
           <div className="row justify-content-end">
             <div className="col-12 col-sm-10 col-md-8 col-lg-5">
@@ -77,14 +76,13 @@ export default function Signup() {
                     </button>
                   </form>
                   <p className="mt-3 text-center">
-                    Already have an account? <a href="/">Login</a>
+                    Already have an account? <Link href="/">Login</Link>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </>
+    </div>
   );
 }

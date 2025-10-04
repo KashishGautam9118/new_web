@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -49,7 +50,7 @@ export default function Home() {
               Login
             </button>
             <p className="mt-3 text-center">
-                    dont have an account? <a href="/signup">Signup</a>
+                    dont have an account? <Link href="/signup">Signup</Link>
                   </p>
           </form>
         </div>
